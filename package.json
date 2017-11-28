@@ -1,0 +1,18 @@
+{
+  "name": "brightknight-website",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "dev": "nuxt"
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "dependencies": {
+    "node-sass": "^4.7.2",
+    "nuxt": "^1.0.0-rc11",
+    "sass-loader": "^6.0.6"
+  }
+}
