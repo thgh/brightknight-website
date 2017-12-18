@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: thgh/one-click-hugo-cms
+  name: git-gateway
   # name: github
   # repo: thgh/repo # Change to your repo
   # url: http://localhost:3000
