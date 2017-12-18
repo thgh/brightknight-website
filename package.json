@@ -11,8 +11,12 @@
     "node": ">=8"
   },
   "dependencies": {
+    "@nuxtjs/axios": "^4.5.0",
+    "netlify-cms": "^1.0.2",
     "node-sass": "^4.7.2",
     "nuxt": "^1.0.0-rc11",
+    "nuxt-netlify-cms": "^2.0.1",
+    "nuxtent": "^1.1.0",
     "sass-loader": "^6.0.6"
   }
 }

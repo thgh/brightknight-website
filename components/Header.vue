@@ -6,10 +6,9 @@
       </h1>
       <nav class="nav-main">
         <nuxt-link to="/">Home</nuxt-link>
-        <nuxt-link to="/what-is-rpa">What is RPA?</nuxt-link>
-        <nuxt-link to="/services">Our services</nuxt-link>
-        <nuxt-link to="/about">About us</nuxt-link>
-        <nuxt-link to="/contact" style="float: right; margin-right: -1rem">Contact</nuxt-link>
+        <nuxt-link to="/en" style="float: right; margin-right: -1rem">en</nuxt-link>
+        <nuxt-link to="/fr" style="float: right;">fr</nuxt-link>
+        <nuxt-link to="/nl" style="float: right;">nl</nuxt-link>
       </nav>
     </div>
   </header>

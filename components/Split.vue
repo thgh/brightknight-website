@@ -4,7 +4,10 @@
       <slot name="img"></slot>
     </div>
     <div class="col">
-      <div class="content">
+      <div class="content" v-if="text">
+        {{ text }}
+      </div>
+      <div class="content" v-else>
         <slot name="text"></slot>
       </div>
     </div>
@@ -18,6 +21,7 @@
 export default {
   props: {
     img: null,
+    text: null,
     textRight: null
   }
 }  
