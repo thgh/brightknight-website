@@ -28,8 +28,9 @@ function asyncDataRoute (route) {
 }
 
 function getContent (params) {
-  const path = [params.lang || 'en', params.slug || 'home'].join('/')
-  return require('axios')
-    .get('http://localhost:9001/' + path)
-    .then(({ data }) => data)
+  const customLang = ['en', 'nl', 'fr'].includes(params.lang)
+  const path = [customLang ? params.lang : 'en', (customLang ? params.slug : params.lang) || 'home'].join('/')
+  return require('minimal-request-promise')
+    .get('https://3.thomasg.be/' + path)
+    .then(({ body }) => JSON.parse(body))
 }
