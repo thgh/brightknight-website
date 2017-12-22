@@ -5,43 +5,53 @@
         BrightKnight  
       </h1>
       <nav class="nav-main">
-        <nuxt-link to="/">Home</nuxt-link>
-        <nuxt-link to="/en" style="float: right; margin-right: -1rem">en</nuxt-link>
-        <nuxt-link to="/fr" style="float: right;">fr</nuxt-link>
-        <nuxt-link to="/nl" style="float: right;">nl</nuxt-link>
+        <a href="/en">en</a>
+        <a href="/fr">fr</a>
+        <a href="/nl">nl</a>
       </nav>
     </div>
   </header>
 </template>
 
 <style lang="scss">
+@import '../assets/css/variables';
+
   .header {
     background: white;
-    padding: 1rem 1rem 0;
+    padding: 1rem 1rem;
+    text-align: center;
     h1 {
-      margin: 0;
-      padding: 1rem 0 .5rem;
+      display: block;
+      margin: 0 auto;
       font-weight: normal;
+      width: 281px;
+      height: 64px;
+      background: url(/brightknight-logo.png);
+      background-size: 100%;
+      text-indent: 290px;
+      overflow: hidden;
     }
   }
   .nav-main {
-    border-top: 1px solid #ddd;
-    padding-bottom: 1em;
+    position: absolute;
+    top: 0;
+    right: 0;
     a {
       display: inline-block;
-      line-height: 1rem;
-      padding: 1rem;
+      padding: 1em;
       font-size: 12px;
+      line-height: 1em;
       text-transform: uppercase;
-      opacity: .7;
+      color: $brand;
+      opacity: 1;
       transition: opacity .3s;
     }
     a:hover {
-      opacity: 1;
+      color: black;
+      text-decoration: underline;
     }
-    a:first-child {
-
-    margin-left: -1rem;
+    a:last-child {
+      padding-right: 2em;
     }
   }
 </style>
