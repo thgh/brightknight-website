@@ -1,6 +1,7 @@
 <template>
   <form class="font-normal leave-email" data-netlify="true" name="email" method="post">
     <input type="hidden" name="form-name" value="email" />
+    <input type="hidden" name="language" :value="$route.params.lang" />
     <p>
       <input type="email" class="leave-email__input" :placeholder="data && data.placeholder || 'email address'" name="email">
       <button type="submit" class="leave-email__button">
