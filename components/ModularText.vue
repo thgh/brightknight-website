@@ -1,14 +1,12 @@
 <template>
   <section class="section font-scale" :class="classes">
     <div class="col">
-      <div class="content" v-html="html"></div>
+      <html-content :data="data" />
     </div>
   </section>
 </template>
 
 <script>
-import { markdownToHTML, youtubePlugin } from '@/util/markdown.js'
-
 export default {
   props: {
     data: null
@@ -19,14 +17,7 @@ export default {
         .split(/\s+/)
         .map(s => 'section--' + s)
         .join(' ')
-    },
-    html () {
-      const input = this.data.html || markdownToHTML(this.data.content)
-      return youtubePlugin(input)
     }
-  },
-  methods: {
-    markdownToHTML
   }
 }
 </script>

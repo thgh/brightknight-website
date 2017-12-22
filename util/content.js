@@ -16,7 +16,6 @@ export function asyncDataRoute (route) {
 }
 
 export function asyncDataPage (context) {
-  console.log('context', context)
   if (context.payload) {
     return { page: context.payload }
   }

@@ -4,7 +4,7 @@
       <img :src="src" alt="" class="img-fill">
     </div>
     <div class="col">
-      <div class="content" v-html="data.html || markdownToHTML(data.content)"></div>
+      <html-content :data="data" />
     </div>
     <div class="col" v-if="!textRight">
       <img :src="src" alt="" class="img-fill">
@@ -13,8 +13,6 @@
 </template>
 
 <script>
-import { markdownToHTML } from '@/util/markdown.js'
-
 export default {
   props: {
     data: null
@@ -32,9 +30,6 @@ export default {
     textRight () {
       return (this.data.header.body_classes || '').includes('text-right')
     }
-  },
-  methods: {
-    markdownToHTML
   }
 }
 </script>
