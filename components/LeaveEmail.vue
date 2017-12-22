@@ -41,7 +41,7 @@ export default {
   background: none;
   color: $brand;
   width: 100%;
-  max-width: 13em;
+  max-width: 13.5em;
   outline: none;
   &::placeholder {
     font-style: italic;
@@ -53,10 +53,11 @@ export default {
 .leave-email__button {
   right: 0;
   top: 0;
-  padding: .75em 1em;
+  padding: .75em 0;
   height: 3em;
   width: 100%;
-  max-width: 13em;
+  max-width: 13.5em;
+  white-space: nowrap;
   line-height: 1.5em;
   font-size: 1em;
   background: $altDark;
