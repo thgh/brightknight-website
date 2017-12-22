@@ -30,8 +30,7 @@ export default {
   position: relative;
 }
 .leave-email__input {
-  display: block;
-  float: left;
+  display: inline-block;
   margin: 0 .5em .5em 0;
   border-width: 0;
   border: 2px solid $brand;
