@@ -41,7 +41,7 @@ export default {
   background: none;
   color: $brand;
   width: 100%;
-  max-width: 14em;
+  max-width: 13em;
   outline: none;
   &::placeholder {
     font-style: italic;
@@ -56,7 +56,7 @@ export default {
   padding: .75em 1em;
   height: 3em;
   width: 100%;
-  max-width: 14em;
+  max-width: 13em;
   line-height: 1.5em;
   font-size: 1em;
   background: $altDark;
