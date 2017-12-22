@@ -1,9 +1,7 @@
 <template>
   <div class="content">
     <div v-html="filtered"></div>
-    <p v-if="email">
-      <leave-email :data="email"></leave-email>
-    </p>
+    <leave-email v-if="email" :data="email"></leave-email>
   </div>
 </template>
 

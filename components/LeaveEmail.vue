@@ -1,10 +1,12 @@
 <template>
   <form class="font-normal leave-email" data-netlify="true" name="email">
-    <input type="text" class="leave-email__input" :placeholder="data && data.placeholder || 'email address'">
-    <button type="submit" class="leave-email__button">
-      {{ data && data.button || '' }}
-      <icon name="send" />
-    </button>
+    <p>
+      <input type="text" class="leave-email__input" :placeholder="data && data.placeholder || 'email address'">
+      <button type="submit" class="leave-email__button">
+        {{ data && data.button || '' }}
+        <icon name="send" />
+      </button>
+    </p>
   </form>
 </template>
 
