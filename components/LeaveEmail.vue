@@ -1,7 +1,7 @@
 <template>
   <form class="font-normal leave-email" data-netlify="true" name="email">
     <p>
-      <input type="text" class="leave-email__input" :placeholder="data && data.placeholder || 'email address'">
+      <input type="email" class="leave-email__input" :placeholder="data && data.placeholder || 'email address'" name="email">
       <button type="submit" class="leave-email__button">
         {{ data && data.button || '' }}
         <icon name="send" />
