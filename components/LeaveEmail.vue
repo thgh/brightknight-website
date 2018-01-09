@@ -3,8 +3,8 @@
     <input type="hidden" name="form-name" value="email" />
     <input type="hidden" name="language" :value="$route.params.lang" />
     <p>
-      <input type="email" class="leave-email__input" :placeholder="data && data.placeholder || 'email address'" name="email">
-      <button type="submit" class="leave-email__button">
+      <input type="email" class="leave-email__input" :placeholder="data && data.placeholder || 'email address'" name="email" v-model="email">
+      <button type="submit" class="leave-email__button" :class="{ empty: !email }">
         {{ data && data.button || '' }}
         <icon name="send" />
       </button>
@@ -16,6 +16,11 @@
 export default {
   props: {
     data: null
+  },
+  data () {
+    return {
+      email: ''
+    }
   }
 }  
 </script>
@@ -60,12 +65,16 @@ export default {
   white-space: nowrap;
   line-height: 1.5em;
   font-size: 1em;
-  background: $altDark;
-  color: $altLight;
+  background: $brand;
+  color: white;
   border: none;
   border-radius: 15px;
   outline: none;
   transition: transform .2s;
+  &.empty {
+    background: $altDark;
+    color: $altLight;
+  }
   .icon {
     margin-left: .4em;
   }
@@ -97,8 +106,12 @@ export default {
     color: white;
   }
   .leave-email__button {
-    background: $altLight;
-    color: $altDark;
+    background: white;
+    color: $brand;
+    &.empty {
+      background: $altLight;
+      color: $altDark;
+    }
   }
   .fill-fg {
   }
