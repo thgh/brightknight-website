@@ -127,6 +127,10 @@ a:visited {
 .section--text-center {
   text-align: center;
 }
+.section--light {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
 .section--dark {
     color: white;
     background: $altDark;

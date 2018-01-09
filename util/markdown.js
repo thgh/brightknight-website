@@ -14,6 +14,9 @@ export function youtubePlugin (input) {
   return input.replace(/<a href="(.*)">plugin:youtube<\/a>/, (_, match) => `<div class="embed-container">
     <iframe src="https://www.youtube.com/embed/${YouTubeGetID(match)}" frameborder="0" allowfullscreen></iframe>
 </div>`)
+    .replace(/\[plugin:youtube\]\((.*)\)/, (_, match) => `<div class="embed-container">
+    <iframe src="https://www.youtube.com/embed/${YouTubeGetID(match)}" frameborder="0" allowfullscreen></iframe>
+</div>`)
 }
 
 function YouTubeGetID(url){
