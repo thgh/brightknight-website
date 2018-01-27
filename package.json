@@ -6,7 +6,7 @@
     "gen": "nuxt generate",
     "build": "nuxt build",
     "start": "nuxt start",
-    "dev": "nuxt"
+    "dev": "PORT=7000 nuxt"
   },
   "engines": {
     "node": ">=8"

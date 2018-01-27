@@ -10,6 +10,9 @@ export default {
   data () {
     return {
       icons: {
+        'strategy': `<img src="/img/strategy.png" alt="Strategy" />`,
+        'analysis': `<img src="/img/analysis.png" alt="Analysis" />`,
+        'platform': `<img src="/img/implementation.png" alt="Implementation" />`,
         'auto-fix': `<svg viewBox="0 0 24 24">
     <path class="fill-fg" d="M7.5,5.6L5,7L6.4,4.5L5,2L7.5,3.4L10,2L8.6,4.5L10,7L7.5,5.6M19.5,15.4L22,14L20.6,16.5L22,19L19.5,17.6L17,19L18.4,16.5L17,14L19.5,15.4M22,2L20.6,4.5L22,7L19.5,5.6L17,7L18.4,4.5L17,2L19.5,3.4L22,2M13.34,12.78L15.78,10.34L13.66,8.22L11.22,10.66L13.34,12.78M14.37,7.29L16.71,9.63C17.1,10 17.1,10.65 16.71,11.04L5.04,22.71C4.65,23.1 4,23.1 3.63,22.71L1.29,20.37C0.9,20 0.9,19.35 1.29,18.96L12.96,7.29C13.35,6.9 14,6.9 14.37,7.29Z" />
 </svg>`,
@@ -35,7 +38,7 @@ account: `<svg viewBox="0 0 24 24">
     <path class="fill-fg" d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z" />
 </svg>`,
 send: `<svg viewBox="0 0 24 24">
-    <path class="fill-fg" d="M2,21L23,12L2,3V10L17,12L2,14V21Z" />
+    <path class="fill-fg" d="M2,21L23,12L2,3Z" />
 </svg>`
       }
     }
@@ -47,8 +50,9 @@ send: `<svg viewBox="0 0 24 24">
 .icon {
   display: inline-block;
   vertical-align: top;
-  width: 1.5em;
-  height: 1.5em;
+  padding-top: .2em;
+  width: 1.1em;
+  height: 1.1em;
 }
 .icon > svg {
   display: block;

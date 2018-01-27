@@ -1,14 +1,18 @@
 <template>
   <header class="header">
-    <div class="container">
-      <h1>
-        BrightKnight  
-      </h1>
-      <nav class="nav-main">
-        <a href="/en">en</a>
-        <a href="/fr">fr</a>
-        <a href="/nl">nl</a>
-      </nav>
+    <div class="section section--scale-lg">
+      <div class="col">
+        <h1>
+          BrightKnight  
+        </h1>
+        <nav class="nav-main">
+          <a href="/en" :class="{ active: $route.params.lang === 'en' }">en</a>
+          |
+          <a href="/fr" :class="{ active: $route.params.lang === 'fr' }">fr</a>
+          |
+          <a href="/nl" :class="{ active: $route.params.lang === 'nl' }">nl</a>
+        </nav>
+      </div>
     </div>
   </header>
 </template>
@@ -18,28 +22,33 @@
 
   .header {
     background: white;
-    padding: 1rem 1rem;
+    // padding: 1rem 1rem;
     text-align: center;
     h1 {
       display: block;
       margin: 0 auto;
       font-weight: normal;
-      width: 281px;
-      height: 64px;
+      font-size: 1em;
+      width: 11.708em;
+      height: 2.666em;
       background: url(/brightknight-logo.png);
       background-size: 100%;
-      text-indent: 290px;
+      text-indent: 12em;
       overflow: hidden;
+    }
+    .col {
+      padding: .5rem;
     }
   }
   .nav-main {
     position: absolute;
     top: 0;
     right: 0;
+    font-size: 12px;
+    color: #ccc;
     a {
       display: inline-block;
-      padding: 1em;
-      font-size: 12px;
+      padding: 1em .5em;
       line-height: 1em;
       text-transform: uppercase;
       color: $brand;
@@ -52,6 +61,9 @@
     }
     a:last-child {
       padding-right: 2em;
+    }
+    .active {
+      color: $altLight;
     }
   }
 </style>

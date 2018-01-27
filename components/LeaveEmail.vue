@@ -1,7 +1,6 @@
 <template>
   <form class="font-normal leave-email" data-netlify="true" name="email" method="post">
     <input type="hidden" name="form-name" value="email" />
-    <input type="hidden" name="language" :value="$route.params.lang" />
     <p>
       <input type="email" class="leave-email__input" :placeholder="data && data.placeholder || 'email address'" name="email" v-model="email">
       <button type="submit" class="leave-email__button" :class="{ empty: !email }">
@@ -9,6 +8,7 @@
         <icon name="send" />
       </button>
     </p>
+    <input type="hidden" name="language" :value="$route.params.lang || 'en'" />
   </form>
 </template>
 
@@ -29,7 +29,7 @@ export default {
 @import '../assets/css/variables';
 
 .leave-email {
-  margin-top: .3em;
+  margin-top: -.3em;
   display: block;
   overflow: auto;
   position: relative;
@@ -40,7 +40,7 @@ export default {
   border-width: 0;
   border: 2px solid $brand;
   padding: .5em;
-  height: 3em;
+  height: 3.8em;
   line-height: 2em;
   font-size: 1em;
   background: none;
@@ -58,22 +58,20 @@ export default {
 .leave-email__button {
   right: 0;
   top: 0;
-  padding: .75em 0;
-  height: 3em;
-  width: 100%;
-  max-width: 13.5em;
+  padding: 1em 1em 1em 1.5em;
+  height: 3.8em;
   white-space: nowrap;
-  line-height: 1.5em;
+  line-height: 1.8em;
   font-size: 1em;
-  background: $brand;
-  color: white;
+  background: $altLight;
+  color: $altDark;
   border: none;
   border-radius: 15px;
   outline: none;
   transition: transform .2s;
   &.empty {
-    background: $altDark;
-    color: $altLight;
+    background: $brand;
+    color: white;
   }
   .icon {
     margin-left: .4em;
@@ -104,13 +102,15 @@ export default {
   .leave-email__input {
     border-color: white;
     color: white;
+    max-width: 25em;
   }
   .leave-email__button {
-    background: white;
-    color: $brand;
+    margin-left: 1em;
+    background: #43DEF0;
+    color: #425C6C;
     &.empty {
-      background: $altLight;
-      color: $altDark;
+      background: white;
+      color: $brand;
     }
   }
   .fill-fg {

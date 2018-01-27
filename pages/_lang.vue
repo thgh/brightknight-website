@@ -1,7 +1,7 @@
 <template>
-  <section class="content-container">
+  <div class="content-container">
     <block v-for="block in page.children" :data="block" :key="block.id" />
-  </section>
+  </div>
 </template>
 
 <script>
@@ -12,7 +12,7 @@ export default {
   asyncData: asyncDataPage,
   head () {
     return {
-      title: this.page.header && this.page.header.title || 'BrightKnight'
+      title: 'BrightKnight'
     }
   }
 }
