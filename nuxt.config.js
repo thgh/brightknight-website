@@ -17,7 +17,8 @@ module.exports = {
   },
   loading: false,
   plugins: [
-    '@/plugins/global.js'
+    '@/plugins/global.js',
+    { src: '~plugins/ga.js', ssr: false }
   ]
 }
 
