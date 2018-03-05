@@ -21,9 +21,9 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ],
-    script: {
+    script: [
       { src: 'https://www.google-analytics.com/analytics.js', async: true, defer: true }
-    }
+    ]
   },
   components: {
     MyHeader,
